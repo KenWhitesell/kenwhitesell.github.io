@@ -11,7 +11,7 @@ We use abstractions to hide underlying complexity of systems.
 Why is this an issue?
 
 
-I recently was reminded of this as the result of a blog post that was brought to my attention. The current (27 December 2024) issue of Django News (https://django-news.com/) highlighted an article titled “Django: avoid using .first() when retrieving a unique object” (https://b0uh.github.io/django-avoid-using-first-when-retrieving-a-unique-object.html).
+I recently was reminded of this as the result of a blog post that was brought to my attention. The current (27 December 2024) issue of [Django News](https://django-news.com/) highlighted an article titled [“Django: avoid using .first() when retrieving a unique object”](https://b0uh.github.io/django-avoid-using-first-when-retrieving-a-unique-object.html).
 
 Briefly, the article points out that if you use the construct “SomeModel.objects.filter(field=’value’).first()”, it adds an “order by” clause to the generated SQL that the expression “SomeModel.objects.get(field=’value’)” avoids. 
 
