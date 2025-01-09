@@ -1,3 +1,5 @@
+plugins:
+  - jekyll-feed
 title: Whitesell on whatever...
 author:
   name: Ken Whitesell
