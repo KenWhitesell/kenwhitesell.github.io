@@ -1,0 +1,9 @@
+d   /run/redis               2775    redis      redis           -       -
+d   /run/uwsgi               2775    mysite     www-data        -       -
+d   /run/mysite              2775    mysite     www-data        -       -
+d   /tmp/mysite              2775    mysite     www-data        -       -
+d   /var/log/mysite          2770    mysite     www-data        -       -
+d   /var/www/mysite          2750    mysite     www-data        -       -
+d   /var/www/mysite/static   2750    mysite     www-data        -       -
+d   /var/www/mysite/media    2750    mysite     www-data        -       -
+d   /etc/redis/fragments     2770    redis      redis        -       -

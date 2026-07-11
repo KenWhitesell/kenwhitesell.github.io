@@ -1,0 +1,39 @@
+server {
+
+    root /var/www/html;
+    index index.html;
+
+    server_name mysite.whitesell.us 10.0.0.127;
+
+    location /static {
+        alias /var/www/mysite/static;
+    }
+
+    location /media {
+        alias /var/www/mysite/media;
+    }
+
+    location / {
+        proxy_pass  http://unix:/run/mysite/mysite.sock;
+        include     /etc/nginx/uwsgi_params.txt;
+    }
+
+    listen [::]:443 ssl ipv6only=on; # managed by Certbot
+    listen 443 ssl; # managed by Certbot
+
+    ssl_certificate /etc/letsencrypt/live/<DOMAIN_NAME>/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/<DOMAIN_NAME>/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/live/<DOMAIN_NAME>/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/live/<DOMAIN_NAME>/ssl-dhparams.pem; # managed by Certbot
+
+}
+
+server {
+    return 301 https://$host$request_uri;
+
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+    server_name example.com www.example.com;
+}
+

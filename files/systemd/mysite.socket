@@ -1,0 +1,8 @@
+[Unit]
+Description=mysite socket
+
+[Socket]
+ListenStream=/run/mysite/mysite.sock
+
+[Install]
+WantedBy=sockets.target

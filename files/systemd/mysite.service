@@ -1,0 +1,12 @@
+[Unit]
+Description=mysite daemon
+After=network.target
+
+[Service]
+User=mysite
+Group=www-data
+WorkingDirectory=/opt/mysite/mysite
+ExecStart=/opt/mysite/gunicorn-mysite.sh
+
+[Install]
+WantedBy=multi-user.target
