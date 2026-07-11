@@ -89,4 +89,8 @@ They're the first devices I've ever used where "touch-typing" would have been co
 
 The lab also had a number of video terminals. They were useful when making lots of program changes that I had written on paper, or playing the various computer games. (I didn't care for wasting the paper playing games.)
 
-I'd guess that the lab really was intended for the community college students, but there was never anyone there who even asked. It appeared to me that at any given time in the evenings at least half of the people there were high school students.
+Side note: Even though the lab really was intended for the community college students, there was never anyone there who even asked. It was never full in the evenings so no one ever needed to wait for access to a terminal. It also appeared to me that at any given time at least half of the people there were high school students.
+
+After the school year ended, I got a summer job. One of the first things I did was to rent a video terminal and paid to have a second phone line installed in the house. That ended almost any need to go to the college, except to make the occasional print of a listing or output.
+
+Since I no longer had access to a paper tape punch, I had no way to keep any machine-readable copies of those programs. (Of course, hindsight shows that the paper tape became obsolete soon after, so keeping that would have been of less value than the printed listings.)
