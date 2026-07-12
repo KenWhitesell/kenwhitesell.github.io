@@ -1,6 +1,7 @@
 ---
 layout: post
 title: A technical career retrospective part 1
+subtitle: January - June 1978
 tags: Django
 ---
 
@@ -15,10 +16,28 @@ Writing programs 50 years ago was a lot different than today.
 
 ## Getting started
 
-Between my junior and senior years of high school (summer '77), we moved from the Baltimore area to Ann Arbor Michigan. (Go Blue!) This included being moved to a high school with district-wide access to a minicomputer. They offered two 1-semester classes in Programming in Basic. While I had some previous exposure to programmable calculators ([TI SR-52](http://www.datamath.org/Sci/WEDGE/SR-52.htm)) and educational toys like the [Digi-Comp I](https://en.wikipedia.org/wiki/Digi-Comp_I) and a variety of the Radio Shack electronics kits, this became my first real introduction to programming.
+Between my junior and senior years of high school (summer '77), we moved from the Baltimore area to Ann Arbor Michigan. (Go Blue!) This included being moved to a high school with district-wide access to a minicomputer. They offered two 1-semester classes in Programming in Basic.
+<figure style="float:left; margin:5px; padding:3px; border:2px solid black;" >
+<figcaption>Digi-Comp I</figcaption>
+<a href="https://en.wikipedia.org/wiki/File:Digicomp_I.JPG">
+<img resource="https://en.wikipedia.org/wiki/File:Digicomp_I.JPG" src="/images/tech_1/Digicomp_I.JPG" height="160" width="330"></a>
+<figcaption>
+<div>Pterre, <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">CC BY-SA 3.0</a>,<br>via Wikimedia Commons</div>
+</figcaption>
+</figure>
+While I had some previous exposure to programmable calculators ([TI SR-52](http://www.datamath.org/Sci/WEDGE/SR-52.htm)) and educational toys like the [Digi-Comp&nbsp;I](https://en.wikipedia.org/wiki/Digi-Comp_I) and a variety of the Radio Shack electronics kits, this became my first real introduction to programming.
 
 The minicomputer was an HP-2000F, programmable in Basic. Our school's primary interface to that system were [Bell ASR 33 Teletypes](https://en.wikipedia.org/wiki/Teletype_Model_33) with the paper tape punch/reader.
-
+<br clear="all" />
+Due to some class scheduling issues and requirements caused by the change in schools, I didn't actually get to start the classes until the second semester (January 1978).
+<figure style="float:right; margin:10px; padding:3px; border:2px solid black;" >
+<figcaption>Teletype Model 33 ASR teletype</figcaption>
+<a href="//en.wikipedia.org/wiki/File:Teletype-IMG_7287.jpg">
+<img resource="//en.wikipedia.org/wiki/File:Teletype-IMG_7287.jpg" src="/images/tech_1/Teletype-IMG_7287.jpg" height="465" width="310"></a>
+<figcaption>
+<div>Rama &amp; Musée Bolo, <a href="https://creativecommons.org/licenses/by-sa/2.0/fr/deed.en">CC BY-SA 2.0 FR</a>,<br>via Wikimedia Commons</div>
+</figcaption>
+</figure>
 ### The teletype
 I had previously taught myself how to type on an old Olivetti mechanical typewriter, where you
 learned that finger pressure on the keys is important. You had to be firm and reasonably consistent.
@@ -82,6 +101,13 @@ Matrices are two-dimensional only, and limited to (roughly) 5000 elements - but 
 The most serious constraint for me was available time to access the system. At best I had perhaps a half-hour before school and an hour after the regular school day to spend in the computer room. As I was becoming increasingly enthralled with writing code, this was becoming a bit of a problem.
 
 I was to the point of writing my code out on paper in the evenings, then waiting at the school door in the mornings to be let in.
+<figure style="float:right; margin:10px; padding:3px; border:2px solid black;" >
+<figcaption>DECwriter II LA-36</figcaption>
+<img src="/images/tech_1/Decwriter_iii.jpg" height="332" width="250">
+<figcaption>
+<div>This picture is really a DECwriter III,<br>but it's close enough to the II.</div>
+</figcaption>
+</figure>
 
 Finally, someone told me that the local community college had a lab that was open for use in the evenings. They had about a dozen DECwriter LA30 terminals that could be used for dial-in access - at 300 baud even!
 
@@ -90,6 +116,14 @@ They're the first devices I've ever used where "touch-typing" would have been co
 The lab also had a number of video terminals. They were useful when making lots of program changes that I had written on paper, or playing the various computer games. (I didn't care for wasting the paper playing games.)
 
 Side note: Even though the lab really was intended for the community college students, there was never anyone there who even asked. It was never full in the evenings so no one ever needed to wait for access to a terminal. It also appeared to me that at any given time at least half of the people there were high school students.
+
+<figure style="float:left; margin:10px; padding:3px; border:2px solid black;" >
+<figcaption>Lear Siegler ADM-3A</figcaption>
+<img src="/images/tech_1/ef52_12.jpg" height="225" width="300">
+<figcaption>
+<div>I don't remember if this was the exact model<br>I rented, but it's close. I do remember<br>it having a rounded profile.</div>
+</figcaption>
+</figure>
 
 After the school year ended, I got a summer job. One of the first things I did was to rent a video terminal and paid to have a second phone line installed in the house. That ended almost any need to go to the college, except to make the occasional print of a listing or output.
 
