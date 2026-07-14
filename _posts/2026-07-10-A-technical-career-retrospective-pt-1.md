@@ -2,7 +2,7 @@
 layout: post
 title: A technical career retrospective part 1
 subtitle: January - June 1978
-tags: Django
+tags: Personal
 ---
 
 ## Why this post?

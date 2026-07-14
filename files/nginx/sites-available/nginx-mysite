@@ -5,15 +5,11 @@ server {
 
     server_name mysite.whitesell.us 10.0.0.127;
 
-    location /static {
+    location /site/stat {
         alias /var/www/mysite/static;
     }
 
-    location /media {
-        alias /var/www/mysite/media;
-    }
-
-    location / {
+    location /site {
         proxy_pass  http://unix:/run/mysite/mysite.sock;
         include     /etc/nginx/uwsgi_params.txt;
     }
@@ -33,7 +29,5 @@ server {
 
     listen 80 default_server;
     listen [::]:80 default_server;
-
-    server_name example.com www.example.com;
 }
 

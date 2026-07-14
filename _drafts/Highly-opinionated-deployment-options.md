@@ -34,7 +34,7 @@ I'm also working with a number of git repos using atypical directory structures.
 
 If I have an active project, I usually end up with a set of scripts specific to that project. (Yes, there are better ways of handling this. No, I don't do this often enough to worry about it - yet.)
 
-> Note: What follows is what I consider my **baseline** deployment environment to be. An even more secure environment is possible through the use of facilities such ACLs, and cgroups. Docker containers can also provide a more secure deployment environment - but not by default.
+> Note: What follows is what I consider my **baseline** deployment environment to be. An even more secure environment is possible through the use of facilities such ACLs, and cgroups. Docker containers can also provide a more secure deployment environment - but not by default. (It takes some work to create a secure Docker-based Django deployment.)
 
 ### Directory usage
 
@@ -105,17 +105,21 @@ For a truly secure environment, you may wish to further restrict access by using
 
 I generally don't bother changing the PostgreSQL configuration on a per-project basis. However, I do frequently run multiple projects on a single PostgreSQL instance, and so I might alter the configuration to best support them.
 
+Periodic backups must be considered an absolute requirement - don't neglect them. How you do them and how often you do them is something only you can determine. You need to identify how much data you can afford to lose, and plan accordingly.
+
+I have one system that is updated infrequently (less than once per day on average). I do a daily backup on the database itself. I have another system that sees much more frequent use. For it, I have set up a read-only replica to go along with the daily backups. In both cases, the daily backups are copied to a different system.
 
 ### Create directories and grant permissions for static and media files
 
-* Prepare the directories for the unix sockets.
-  * Copy the `tmpfiles-mysite` file to `/etc/tmpfiles.d`
-  * `systemd-tmpfiles --create --remove`
-
-This tmpfiles also contains the directives to create the directories
-for the socket files
+The sample file `tmpfiles-mysite` ensures that the correct directories are created with the appropriate owners and permissions. This file can be copied to the `/etc/tmpfiles.d` directory. It can immediately be applied with the command `systemd-tmpfiles --create --remove`, otherwise, those directories will be validated every time the system is booted.
+(See the tmpfiles docs for a detailed description of the file contents.)
 
 ### Configure the web services
+
+Nginx is configured to forward traffic to Django, or to retrieve static files.
+Anything else is ignored.
+
+A sample file is in `nginx/sites-available/nginx-mysite`. It's not usable as-is. You need to have your ssl certificate for your domain, and change the path in the SSL directives to match your directory structure. If you use letsencrypt, the paths will be similar to what I'm showing in the sample file.
 
 ## Commands issued as `mysite`
 
