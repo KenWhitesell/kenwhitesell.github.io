@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A technical career retrospective part 2
-subtitle: June 1978 - May 1979
+subtitle: 'MTS: June 1978 - May 1979'
 tags: Personal
 ---
 
@@ -58,17 +58,17 @@ A block-mode terminal had a full screen buffer in the terminal. You could type o
 
 Finally, the IBM terminal controllers use a different communication protocol than the typical modem.
 
-The common modems of the time sent bytes as a start bit, seven data bits, a parity bit, and a stop bit. This allowed terminals (and computers) to send characters at arbitrary intervals. But it also added some overhead in that you were sending 10 bits for each byte, or 25% more data than what is used.
+The common modems of the time sent bytes as a start bit, seven data bits, a parity bit, and a stop bit. This allowed terminals (and computers) to send characters at arbitrary intervals. But it also added some overhead in that 10 bits were sent for each byte, or 25% more data than what is used.
 
 Because the 3270s were designed to send a full screen of data at a time, the communications protocol was designed to optimize that. A block of data was sent within a frame, and within the framing, 8-bit characters could be sent as 8 bits per character, or 20% less data.
 
-Because of those differences, you couldn't just hook up a standard modem to an IBM mainframe and have it work - and *that* is the purpose of the data concentrator. It could have standard modems attached to it, and it would handle all the conversions between what the terminals provide and what the mainframe expects and supports.
+Because of those differences, a standard modem could not be connected to an IBM mainframe - and *that* is the purpose of the data concentrator. It could have standard modems attached to it, and it would handle all the conversions between what the terminals provide and what the mainframe expects and supports.
 
 I point all this out because MTS supported both. They had something in the neighborhood of 200 modem lines for regular terminals and some small number of 3270s in the computer lab to go along with traditional terminals.
 
-There were benefits to learning and using both. There was a full-screen editor available on the 3270 that was unique at the time - at least compared to the line-editors you would otherwise need to use. The full screen mode of the 3270 also made it easier to look at full 132 column output. On a typical video terminal, the output would wrap. This makes it more difficult to read column-oriented output. On the 3270, you had a horizontal scroll function, that would move your display from columns 1 - 80 to instead show columns 53 - 132.
+There were benefits to learning and using both. There was a full-screen editor available on the 3270 that was unique - at least compared to the line-editors common at that time. The full screen mode of the 3270 also made it easier to look at full 132 column output. On a typical video terminal, the output would wrap. This makes it more difficult to read column-oriented output. The 3270 had a horizontal scroll function, moving the display from columns 1 - 80 to show columns 53 - 132.
 
-When using a normal ASCII terminal, you needed to be aware of the character set differences. There are characters in EBCDIC that aren't in ASCII, and vice versa.
+There were differences between the EBCDIC and ASCII characters sets. There are characters in EBCDIC that aren't in ASCII, and vice versa.
 
 For example, EBCDIC at that time did not have the square brackets (`[ ]`), braces (`{ }`) or the carat (`^`). On the other hand, ASCII doesn't have the cent (`¢`) or the `logical not` (`¬`). The logical not was easy to remmember because it was mapped to the carat - making it easy to remember and recognize when working on an ASCII terminal.
 
@@ -139,7 +139,7 @@ The biggest difficulty for me is that the only references I had for most of thes
 
 I had my Fortran tutorials from the high school and the AlgolW from class. PIL was close enough in spirit to BASIC that I had no problem there, either. As for the assembler and COBOL - no chance.
 
-Working in Fortran introduced me to the concept of a core dump. I already understood the distinction between a compiler and an interpreter. I knew that the Fortran compiler produced machine code, and it was that code that was being run. If there was a serious flaw in the program (like a divide by zero error), your output would be pages and pages of the hexadecimal representation of the memory being used by your program.
+Working in Fortran introduced me to the concept of a core dump. I already understood the distinction between a compiler and an interpreter. I knew that the Fortran compiler produced machine code, and it was that code that was being run. If there was a serious flaw in the program (like a divide by zero error), the output would be pages and pages of the hexadecimal representation of the memory being used by that program.
 
 I knew hex well enough to find my data arrays (I think), but didn't understand the system well enough to take advantage of the other information provided. I knew that at some point in time this would be something I'd really want to learn.
 
@@ -168,7 +168,7 @@ I had no way of knowing it at the time, but working with MTS gave me a unique pe
 
 ## Still available today!
 
-Around 2000, I became familiar with a mainframe emulator called [Hercules](https://en.wikipedia.org/wiki/Hercules_(emulator)). You could emulate a complete IBM 360 or 370 system, running classic IBM OSs from the 60s and 70s. In 2011, the U of M released MTS archives containing usable MTS tape images. I, among many others, managed to get it running on Hercules. It was a real nostalga trip! I encourage anyone interested to take a look at [Try MTS](https://try-mts.com)
+Around 2000, I became familiar with a mainframe emulator called [Hercules](https://en.wikipedia.org/wiki/Hercules_(emulator)). You can emulate a complete IBM 360 or 370 system, running classic IBM OSs from the 60s and 70s. In 2011, the U of M released MTS archives containing usable MTS tape images. I, among many others, managed to get it running on Hercules. It was a real nostalga trip! I encourage anyone interested to take a look at [Try MTS](https://try-mts.com)
 
 If you want to see what really good documentation looks like, the manuals are also available in a variety of places online. (See [Bitsavers](https://www.bitsavers.org/pdf/univOfMichigan/mts/) among others.)
 
