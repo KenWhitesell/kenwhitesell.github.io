@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A technical career retrospective part 1
-subtitle: 'HP-200F: January - June 1978'
+subtitle: 'HP-2000F: January - June 1978'
 tags: Personal
 ---
 
