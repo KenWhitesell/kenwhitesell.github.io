@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A technical career retrospective part 4
-subtitle: 'GCOS: January 1980 - sometime in 1984'
+subtitle: 'GCOS: January 1980 - 1984'
 tags: Personal
 ---
 
@@ -55,9 +55,9 @@ Of course, while you're trying to read your code and focus on fixing your bugs, 
 
 ### Code libraries
 
-I was first introduced to the concept of a code library in that class. It wasn't even remotely similar to `RCS`, `CVS`, `SVN` or `GIT`. It was just a tape storing file. It was your protection against disk failure or a standard facility for sharing code with a different site.
+I was first introduced to the concept of a code library in that class. It wasn't even remotely similar to `RCS`, `CVS`, `SVN` or `GIT`. It was just a tape storing file. It was protection against disk failure or a standard facility for sharing code with a different site.
 
-A code library was a tape containing your source or object code. There was a program that managed the contents of that tape. Jobs would have directives to add, remove, or replace entries on the tape with updated files. The concept was that every time a program was put into production, the source code would be added to the source tape and the object deck added to the object tape.
+A code library was a tape containing source or object code. There was a program that managed the contents of that tape. Jobs would have directives to add, remove, or replace entries on the tape with updated files. The concept was that every time a program was put into production, the source code would be added to the source tape and the object deck added to the object tape.
 
 I seem to remember that the directives needed to be applied in the order that the files appeared on the tape, making it necessary to track the order in which the files were on the tape.
 
@@ -79,6 +79,7 @@ There were also Extended Instruction Set (EIS) instructions that were 1 - 4(?) w
 
 This allowed the programmer (or compiler) to more easily copy character data without worrying about word alignment, or the location of characters within a word. And, the instruction codes for doing this were the same, regardless of whether it was accessing 6 or 9-bit characters, or 4-bit bcd numeric digits.
 
+
 #### No virtual memory!
 
 The version of GCOS we were using did **not** support any type of virtual memory. At the time I started, the computer only had 192K words of memory. Without virtual memory, the system could only run as many programs as would fit in real memory. Program memory had to be contiguous as well - there was no concept of "pages" where a program could be segmented into different parts and loaded into different areas of memory.
@@ -89,9 +90,9 @@ As a result, there would be times when programs were queued up waiting for a con
 
 #### Limits on memory usage
 
-You'd learn pretty quickly not to rely upon the system defaults for memory requirements. Those defaults were generally adequate for large production-type programs, but were far larger than what was usually needed for student projects.
+It was beneficial to not rely upon the system defaults for memory requirements. Those defaults were generally adequate for large production-type programs, but were far larger than what was usually needed for student projects.
 
-The COBOL compiler would normally allocate 32K, but I think it could be reduced to around 26K to 28K for a compile. The other languages used, FORTRAN and GMAP allocated less, but still more than what was needed.
+The COBOL compiler would normally allocate 32K, but I think it could be reduced to something between 24K to 28K for a compile. The other languages used, FORTRAN and GMAP allocated less, but still more than what was needed.
 
 The EXECUTE statement for compiled programs would allocate 16K, but most of the student programs could run in 4K to 8K, depending upon which language it was written in.
 
@@ -101,22 +102,38 @@ It would help you, because if the system had a 30K memory range available, it wo
 
 (We weren't officially taught this - it just seemed to be knowledge that was passed along from class to class among people working in the pit.)
 
-I don't remember exactly when, but while I was there, the system was upgraded from 192K to 256K. There was also an OS upgrade that allowed for programs to be moved in memory. These two changes greatly improved job throughput, making it far more practical to allow more students to spend more time working on terminals instead of using cards.
+I don't remember exactly when, but while I was there, the system was upgraded from 192K to 256K. There was also an OS upgrade that allowed for programs to be moved in memory. The programs still needed to remain in a contiguous block of memory, but they could get moved around to open up space for other large programs. These two changes greatly improved job throughput, making it far more practical to allow more students to spend more time working on terminals instead of using cards.
+
+#### No dynamic memory allocation
+
+In the earlier version of GCOS, it was not possible to allocate additional memory. (There was an os function to request additional memory, but in a non-swappable and memory-constrained system, it was as likely to fail as not.)
+
+In the later version after the upgrade, a request for memory allocation would always work - at the risk that the entire program may get swapped out until a large enough block of contiguous memory became available.
+
+It was always better to request the maximum amount of memory needed up front.
+
+#### No re-entrant or recursive code
+
+The standard memory allocation for calling sequences in GMAP, COBOL, and FORTRAN programs did not include any concept of a stack. A function was responsible for defining the memory locations to store the registers before using them. If a function was going to use 4 registers, then it would define the storage area for those registers when it was assembled. The `return` sequence would restore those registers before returing to the calling program.
+
+Since there was only enough space allocated for one copy of the registers, any attempt to re-enter that function would result in the previous values being overwritten.
+
+Side note: The Algol compiler did support recursive code. I don't think I ever looked into how they managed the stack. (I can envision a couple different ways that it could be done, but I don't what was actually implemented.)
 
 #### No remote access!
 
-This wasn't so much a technical difference as it was an environmental one. The computer room, pit, and the student lab areas were only open Monday-Friday 6 AM - 10 PM. Within that time, I was busy enough doing my real job that I wouldn't dare work on a personal project.
+This wasn't so much a technical difference as it was an environmental one. The computer room, pit, and the student lab areas were only open Monday-Friday 6 AM - 10 PM. I wouldn't dare work on a personal project while on duty.
 
 
 ### The next step
 
 In March 1983, I left Keesler for my first real duty station in Washington DC. I was stationed there for almost three full years, but only worked on the H-6000 for about the first half of my stay. That became my first real job where I needed to "crank out copious quantities of COBOL code".
 
-The systems I worked on were not interactive in nature. They were typical batch processing of one of two types. The program either read a file and produced reports based on the data, or would read a data file containing information to update in the master file.
+Most of the work was typical batch processing of one of two types. The program either read a file and produced reports based on the data, or would read a data file containing information to update in the master file.
 
-I did have one project that was intended to be interactive - and taking advantage of the terminal page mode. What I most remember was being quite surprised to discover that the FORTRAN library for handling the screen was far superior to the COBOL library for doing the same.
+I did have one project that was intended to be interactive - and taking advantage of the terminal page mode. What I most remember about that project was being quite surprised to discover that the FORTRAN library for handling the screen was far superior to the COBOL library for doing the same.
 
-If you created a 2 dimensional array of same-sized fields on the screen, the FORTRAN library would return that data directly to a character matrix. Creating the same screen in COBOL appeared to require individual data elements for each field, making it far more awkward to process 50+ fields. (If there _was_ a way to get that data to populate a COBOL table, the two of us working on this were unable to discover it.)
+The FORTRAN library could return a regular pattern of identical screen fields directly to a 2-dimensional character matrix. Creating the same screen in COBOL appeared to require individual data elements for each field, making it far more awkward to process 50+ fields. (If there _was_ a way to get that data to populate a COBOL table, the two of us working on this were unable to discover it.)
 
 ### A side-bar : Recurring themes
 
