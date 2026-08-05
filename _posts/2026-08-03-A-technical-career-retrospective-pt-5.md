@@ -94,7 +94,15 @@ Originally, AppleSoft was distributed on cassette tape or floppy disk, using mor
 
 When the Apple 2+ was release, it had AppleSoft installed in the ROMs.
 
-Apple also sold a card into which ROMs could be installed. Inserting an Integer ROM card in slot 0 of an Apple 2+, or an AppleSoft ROM card in an Apple 2, provided the ability to switch between the two versions. Later, Apple sold a RAM card (The "Apple Language Card") for slot 0 which allowed either version to be loaded on to it - along with other possible options.
+<figure style="float:right; margin:5px; padding:3px; border:2px solid black;" >
+<img src="/images/tech_5/Apple_language_card.png" width="422" height="188">
+<figcaption>The Apple Language Card</figcaption>
+</figure>
+
+Apple also sold a card into which ROMs could be installed. Inserting an Integer ROM card in slot 0 of an Apple 2+, or an AppleSoft ROM card in an Apple 2, provided the ability to switch between the two versions.
+
+Later, Apple sold a RAM card (The "Apple Language Card") for slot 0 which allowed either version to be loaded on to it - along with other possible options.
+<div style="clear: right;"></div>
 
 Side note: Neither version of BASIC had a "renumber" command built-in. To renumber your BASIC program it was necessary to run an external utility to do it for you.
 
