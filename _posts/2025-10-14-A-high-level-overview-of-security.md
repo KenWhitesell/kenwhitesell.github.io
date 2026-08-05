@@ -57,7 +57,7 @@ Information security is the same. You want to invest the appropriate amount of e
 This means that the decision regarding those efforts must be made not only in the context of the value of those assets but also in the risks that exist as well.
 
 I have some projects that ran in isolated and air-gapped environments. The risks to those projects existed solely from the people using the equipment. That creates a much different set of security requirements than (for example) a system preparing ACH (electronic fund) transfers between banks.
-
+<!--more-->
 ## What do we mean by "Secure" anyway?
 
 Many people think of security as simply preventing an unauthorized person from accessing data. And while that _is_ a _part_ of security, it's not the entire picture.

@@ -35,6 +35,7 @@ I'm also working with a number of git repos using atypical directory structures.
 If I have an active project, I usually end up with a set of scripts specific to that project. (Yes, there are better ways of handling this. No, I don't do this often enough to worry about it - yet.)
 
 > Note: What follows is what I consider my **baseline** deployment environment to be. An even more secure environment is possible through the use of facilities such ACLs, and cgroups. Docker containers can also provide a more secure deployment environment - but not by default. (It takes some work to create a secure Docker-based Django deployment.)
+<!--more-->
 
 ### Directory usage
 

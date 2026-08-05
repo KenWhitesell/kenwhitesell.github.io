@@ -20,6 +20,7 @@ During the last month of school, we were encouraged to start learning about the 
 A chance to have access to a real mainframe!
 
 We were given a brief overview - it was like a 10-page handout describing the basics of connecting to the system and the common commands you may need to use. For anything more detailed than that, we had to go to the U-M Computing Center lab library for information.
+<!--more-->
 
 ### The basics
 

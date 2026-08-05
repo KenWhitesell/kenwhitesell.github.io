@@ -29,6 +29,7 @@ In my mind, I needed a computer with two specific features - persistent storage,
 
 Now, most of you would quickly realize that a programmable calculator doesn't have anywhere _near_ enough computing power to come close to what a full CPU-based system can do - and you would be correct. However, my pet projects, all being primarily mathematical in nature (statistics and probabilities), were well-suited for calculator-based implementations - or so I thought ...
 <div style="clear: right;"></div>
+<!--more-->
 
 ### The TI-59
 

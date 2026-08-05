@@ -34,7 +34,7 @@ Challenging at times, stressful for sure, aggravating and frustrating when thing
 I've also had the great benefit of working with some _truly_ brilliant people who had inspired me and taught me more in ways that they might not even realize.
 
 Just as important were the "people persons" that helped shape me into the person I am today. They were just as inspirational as those referenced above. Their contributions to my career cannot be overstated - for without their guidance, there's no way my career would have been as successful as I consider it to have been. Perhaps, their role was **more** difficult because those lessons were needed, but not necessarily wanted or well-received.
-
+<!--more-->
 What did my career look like?
 
 I've only been employed by 4 organizations. (I have done some work on the side at different times, but not enough to be significant.) I've tried counting the number of different "jobs" that I have held, but that's a bit of a nebulous number because both the Air Force and Monumental were very flexible regarding the job duties assigned to an individual without being particularly concerned with job titles. I frequently found myself placed into assignments in situations where management thought I was the best fit at the moment.

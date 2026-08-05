@@ -13,7 +13,7 @@ Why is this an issue?
 
 I recently was reminded of this as the result of a blog post that was brought to my attention. The current (27 December 2024) issue of [Django News](https://django-news.com/) highlighted an article titled [“Django: avoid using .first() when retrieving a unique object”](https://b0uh.github.io/django-avoid-using-first-when-retrieving-a-unique-object.html).
 
-Briefly, the article points out that if you use the construct “SomeModel.objects.filter(field=’value’).first()”, it adds an “order by” clause to the generated SQL that the expression “SomeModel.objects.get(field=’value’)” avoids. 
+Briefly, the article points out that if you use the construct “SomeModel.objects.filter(field=’value’).first()”, it adds an “order by” clause to the generated SQL that the expression “SomeModel.objects.get(field=’value’)” avoids.
 
 This is accurate.
 
@@ -22,6 +22,8 @@ However, the author then goes on to say “No more ordering, it is faster!” �
 It is easy to lose sight of the fact that SQL itself is an abstraction layer for the database.
 
 Making judgments about the relative performance of two SQL statements is not trivial and cannot be accurately or definitively made without going beyond the SQL statement itself.
+
+<!--more-->
 
 ### Executing a query
 
@@ -35,7 +37,7 @@ The creation of the plan depends upon a number of factors, including the size of
 
 A database engine will usually keep statistics about the tables in the database to help the query planner determine what the most effective query plan will be for a given query.
 
-As a result of this, there is no requirement that the query plan include explicit operations for every clause in the original SQL statement. The query planner / query optimizer for the database is free to select and organize any defined set of operations necessary to satisfy the submitted statement. 
+As a result of this, there is no requirement that the query plan include explicit operations for every clause in the original SQL statement. The query planner / query optimizer for the database is free to select and organize any defined set of operations necessary to satisfy the submitted statement.
 
 It is also possible that changes to the database may change the operations selected by the query planner for a given SQL statement. It’s quite reasonable to find that a query plan generated today is not the same query plan generated yesterday for exactly the same query.
 
@@ -49,15 +51,15 @@ Because identifying the performance characteristics of an SQL query requires a l
 
 You cannot compare two SQL statements “A” and “B”, and say that “A” is faster than “B” without examining the query plans generated for each – and sometimes the results are surprising.
 
-There’s also the question of whether the difference in performance is significant to the degree that it is worth changing your code or altering the types of statements you write to account for it. 
+There’s also the question of whether the difference in performance is significant to the degree that it is worth changing your code or altering the types of statements you write to account for it.
 
-- If the difference in execution time is 10 seconds, I’ll definitely look at optimizing the query. 
+- If the difference in execution time is 10 seconds, I’ll definitely look at optimizing the query.
 
 - If the difference in execution time is 10 milliseconds, I’m probably not going to bother – unless it’s a _very_ frequently executed query in an automated process. In the case of a web request, it’s unlikely I would consider making a change.
 
 ### Testing:
 
-I made a copy of some tables from an existing Django-project database to a new database. 
+I made a copy of some tables from an existing Django-project database to a new database.
 
 I generated 1000 User objects to be stored in `auth_user`.
 
@@ -84,7 +86,7 @@ Why the fastest? Because I’m looking to identify how quickly the database can 
 ```
 explain analyze select "id" from auth_user where id=555 limit 1;
 
-                                                             QUERY PLAN                                                              
+                                                             QUERY PLAN
 -------------------------------------------------------------------------------------------------------------------------------------
  Limit  (cost=0.28..8.29 rows=1 width=4) (actual time=0.036..0.037 rows=1 loops=1)
    ->  Index Only Scan using auth_user_pkey on auth_user  (cost=0.28..8.29 rows=1 width=4) (actual time=0.033..0.033 rows=1 loops=1)
@@ -100,7 +102,7 @@ And
 ```
 explain analyze select "id" from auth_user where id=555 order by "id" limit 1;
 
-                                                             QUERY PLAN                                                              
+                                                             QUERY PLAN
 -------------------------------------------------------------------------------------------------------------------------------------
  Limit  (cost=0.28..8.29 rows=1 width=4) (actual time=0.027..0.029 rows=1 loops=1)
    ->  Index Only Scan using auth_user_pkey on auth_user  (cost=0.28..8.29 rows=1 width=4) (actual time=0.023..0.024 rows=1 loops=1)
@@ -118,7 +120,7 @@ From my perspective, these results are effectively identical. The planning cost 
 ```
 explain analyze select "id" from auth_user where username='MB' limit 1;
 
-                                                                    QUERY PLAN                                                                    
+                                                                    QUERY PLAN
 --------------------------------------------------------------------------------------------------------------------------------------------------
  Limit  (cost=0.28..8.29 rows=1 width=4) (actual time=0.047..0.049 rows=1 loops=1)
    ->  Index Scan using auth_user_username_6821ab7c_like on auth_user  (cost=0.28..8.29 rows=1 width=4) (actual time=0.045..0.045 rows=1 loops=1)
@@ -133,7 +135,7 @@ And
 ```
 explain analyze select "id" from auth_user where username='MB' order by "id" limit 1;
 
-                                                                       QUERY PLAN                                                                       
+                                                                       QUERY PLAN
 --------------------------------------------------------------------------------------------------------------------------------------------------------
  Limit  (cost=8.30..8.31 rows=1 width=4) (actual time=0.044..0.046 rows=1 loops=1)
    ->  Sort  (cost=8.30..8.31 rows=1 width=4) (actual time=0.043..0.044 rows=1 loops=1)
@@ -153,7 +155,7 @@ Again, the difference between the two is negligible. In theory, the version with
 ```
 explain analyze select id from forwarded_rsu_packet where "id" = 555555 limit 1;
 
-                                                                        QUERY PLAN                                                                         
+                                                                        QUERY PLAN
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
  Limit  (cost=0.42..8.44 rows=1 width=8) (actual time=0.048..0.049 rows=1 loops=1)
    ->  Index Only Scan using forwarded_rsu_packet_pkey on forwarded_rsu_packet  (cost=0.42..8.44 rows=1 width=8) (actual time=0.046..0.046 rows=1 loops=1)
@@ -169,7 +171,7 @@ And
 ```
 explain analyze select id from forwarded_rsu_packet where "id" = 555555 order by id limit 1;
 
-                                                                        QUERY PLAN                                                                         
+                                                                        QUERY PLAN
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
  Limit  (cost=0.42..8.44 rows=1 width=8) (actual time=0.044..0.045 rows=1 loops=1)
    ->  Index Only Scan using forwarded_rsu_packet_pkey on forwarded_rsu_packet  (cost=0.42..8.44 rows=1 width=8) (actual time=0.042..0.042 rows=1 loops=1)
@@ -186,7 +188,7 @@ Again, negligible difference. What I actually noticed here was the effect of the
 
 ```
 explain analyze select id from forwarded_rsu_packet where smg = '4e530a8f184314b4676b' limit 1;
-                                                                      QUERY PLAN                                                                       
+                                                                      QUERY PLAN
 -------------------------------------------------------------------------------------------------------------------------------------------------------
  Limit  (cost=0.42..8.44 rows=1 width=8) (actual time=0.051..0.052 rows=1 loops=1)
    ->  Index Scan using forwarded_r_smg_e77b86_idx on forwarded_rsu_packet  (cost=0.42..8.44 rows=1 width=8) (actual time=0.050..0.050 rows=1 loops=1)
@@ -200,7 +202,7 @@ And
 
 ```
 explain analyze select id from forwarded_rsu_packet where smg = '4e530a8f184314b4676b' order by id limit 1;
-                                                                         QUERY PLAN                                                                          
+                                                                         QUERY PLAN
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
  Limit  (cost=8.45..8.46 rows=1 width=8) (actual time=0.060..0.061 rows=1 loops=1)
    ->  Sort  (cost=8.45..8.46 rows=1 width=8) (actual time=0.059..0.059 rows=1 loops=1)
@@ -219,7 +221,7 @@ For the first time, the version without the “order by” clause is faster. Wha
 
 ```
 explain analyze select id from forwarded_rsu_packet where noidx = '4e530a8f184314b4676b' limit 1;
-                                                                QUERY PLAN                                                                 
+                                                                QUERY PLAN
 -------------------------------------------------------------------------------------------------------------------------------------------
  Limit  (cost=1000.00..93756.11 rows=1 width=8) (actual time=178.552..191.465 rows=1 loops=1)
    ->  Gather  (cost=1000.00..93756.11 rows=1 width=8) (actual time=178.548..191.458 rows=1 loops=1)
@@ -237,7 +239,7 @@ And
 
 ```
 explain analyze select id from forwarded_rsu_packet where noidx = '4e530a8f184314b4676b' order by id limit 1;
-                                                                   QUERY PLAN                                                                    
+                                                                   QUERY PLAN
 -------------------------------------------------------------------------------------------------------------------------------------------------
  Limit  (cost=93756.12..93756.13 rows=1 width=8) (actual time=138.248..148.649 rows=1 loops=1)
    ->  Sort  (cost=93756.12..93756.13 rows=1 width=8) (actual time=138.245..148.645 rows=1 loops=1)

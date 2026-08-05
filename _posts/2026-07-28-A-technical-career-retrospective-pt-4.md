@@ -18,6 +18,7 @@ First exposure to a traditional batch-oriented computer system
 In my previous posts, I was able to double-check my memory on some technical details when I wasn't sure of my memory. In the next couple of articles I'll be discussing various aspects of my military career, and I've been unable to find much in the way of specific details to confirm or correct my memory.
 
 Take any details I write here with a large bucket of salt! Some of it I'm more confident than others - but I could simply be more confidently wrong. And for the most part, there aren't any pictures of the environment available either. Images I did find were for more generic installations.
+<!--more-->
 
 ### Training
 

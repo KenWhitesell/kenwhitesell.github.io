@@ -38,6 +38,8 @@ Due to some class scheduling issues and requirements caused by the change in sch
 <div>Rama &amp; Musée Bolo, <a href="https://creativecommons.org/licenses/by-sa/2.0/fr/deed.en">CC BY-SA 2.0 FR</a>,<br>via Wikimedia Commons</div>
 </figcaption>
 </figure>
+<!--more-->
+
 ### The teletype
 I had previously taught myself how to type on an old Olivetti mechanical typewriter, where you
 learned that finger pressure on the keys is important. You had to be firm and reasonably consistent.
