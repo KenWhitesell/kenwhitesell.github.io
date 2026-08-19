@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="100%" height="100%">
+  <!-- Definitions for Markers and Shadows -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#334155" />
+    </marker>
+    <filter id="drop-shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="3" stdDeviation="2" flood-opacity="0.1" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="900" height="480" fill="#F8FAFC" rx="8" />
+
+  <!-- TITLE -->
+  <text x="450" y="35" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#1E293B">MVS Generation Data Group (GDG) Structure</text>
+
+  <!-- ==================== GDG BASE NAME LAYER ==================== -->
+  <!-- Base Container -->
+  <rect x="250" y="65" width="400" height="70" rx="6" fill="#1E3A8A" stroke="#172554" stroke-width="2" filter="url(#drop-shadow)" />
+  <text x="450" y="92" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">GDG BASE INDEX</text>
+  <text x="450" y="115" text-anchor="middle" font-family="Courier New, Courier, monospace" font-size="15" font-weight="bold" fill="#60A5FA">PROD.INVENTRY.MASTER.DATA</text>
+
+  <!-- Master distribution paths to generations -->
+  <path d="M 450 135 L 450 170" fill="none" stroke="#334155" stroke-width="2" />
+  <path d="M 140 170 L 760 170" fill="none" stroke="#334155" stroke-width="2" />
+
+  <!-- Downward arrows to each generation block -->
+  <path d="M 140 170 L 140 210" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#arrow)" />
+  <path d="M 345 170 L 345 210" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#arrow)" />
+  <path d="M 555 170 L 555 210" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#arrow)" />
+  <path d="M 760 170 L 760 210" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#arrow)" />
+
+
+  <!-- ==================== FOUR GENERATIONS LAYER ==================== -->
+
+  <!-- Generation 1: G0002V00 -->
+  <g transform="translate(40, 210)">
+    <rect x="0" y="0" width="200" height="150" rx="6" fill="#FFFFFF" stroke="#64748B" stroke-width="1.5" filter="url(#drop-shadow)" />
+    <!-- Header -->
+    <rect x="0" y="0" width="200" height="30" rx="6" fill="#64748B" />
+    <text x="100" y="20" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF">Oldest Generation</text>
+    <!-- Relative & Absolute names -->
+    <text x="100" y="60" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="#0F172A">Relative: (-3)</text>
+    <text x="100" y="90" text-anchor="middle" font-family="Courier New, Courier, monospace" font-size="12" font-weight="bold" fill="#475569">...MASTER.DATA.G0002V00</text>
+    <!-- Status Tag -->
+    <rect x="40" y="112" width="120" height="22" rx="4" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1" />
+    <text x="100" y="127" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#475569">Historical Archive</text>
+  </g>
+
+  <!-- Generation 2: G0003V00 -->
+  <g transform="translate(245, 210)">
+    <rect x="0" y="0" width="200" height="150" rx="6" fill="#FFFFFF" stroke="#0EA5E9" stroke-width="1.5" filter="url(#drop-shadow)" />
+    <rect x="0" y="0" width="200" height="30" rx="6" fill="#0EA5E9" />
+    <text x="100" y="20" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF">Active Generation</text>
+    <text x="100" y="60" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="#0F172A">Relative: (-2)</text>
+    <text x="100" y="90" text-anchor="middle" font-family="Courier New, Courier, monospace" font-size="12" font-weight="bold" fill="#0369A1">...MASTER.DATA.G0003V00</text>
+    <rect x="40" y="112" width="120" height="22" rx="4" fill="#E0F2FE" stroke="#93C5FD" stroke-width="1" />
+    <text x="100" y="127" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#0369A1">Cataloged</text>
+  </g>
+
+  <!-- Generation 3: G0004V00 -->
+  <g transform="translate(455, 210)">
+    <rect x="0" y="0" width="200" height="150" rx="6" fill="#FFFFFF" stroke="#0EA5E9" stroke-width="1.5" filter="url(#drop-shadow)" />
+    <rect x="0" y="0" width="200" height="30" rx="6" fill="#0EA5E9" />
+    <text x="100" y="20" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF">Active Generation</text>
+    <text x="100" y="60" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="#0F172A">Relative: (-1)</text>
+    <text x="100" y="90" text-anchor="middle" font-family="Courier New, Courier, monospace" font-size="12" font-weight="bold" fill="#0369A1">...MASTER.DATA.G0004V00</text>
+    <rect x="40" y="112" width="120" height="22" rx="4" fill="#E0F2FE" stroke="#93C5FD" stroke-width="1" />
+    <text x="100" y="127" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#0369A1">Cataloged</text>
+  </g>
+
+  <!-- Generation 4: G0005V00 -->
+  <g transform="translate(660, 210)">
+    <rect x="0" y="0" width="200" height="150" rx="6" fill="#FFFFFF" stroke="#10B981" stroke-width="2" filter="url(#drop-shadow)" />
+    <rect x="0" y="0" width="200" height="30" rx="6" fill="#10B981" />
+    <text x="100" y="20" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF">Current Generation</text>
+    <text x="100" y="60" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="#0F172A">Relative: (0)</text>
+    <text x="100" y="90" text-anchor="middle" font-family="Courier New, Courier, monospace" font-size="12" font-weight="bold" fill="#047857">...MASTER.DATA.G0005V00</text>
+    <rect x="40" y="112" width="120" height="22" rx="4" fill="#D1FAE5" stroke="#6EE7B7" stroke-width="1" />
+    <text x="100" y="127" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#047857">Most Recent (0)</text>
+  </g>
+
+
+  <!-- ==================== FOOTNOTES & CONCEPTS ==================== -->
+  <!-- Contextual explanation on name formats -->
+  <text x="40" y="395" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#475569">
+    <tspan font-weight="bold">Absolute Names:</tspan> Stored on disk with chronological tags matching the <tspan font-family="Courier New, Courier, monospace" font-weight="bold">GxxxxVyy</tspan> format (Generation number + Version number).
+  </text>
+  <text x="40" y="415" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#475569">
+    <tspan font-weight="bold">Relative Names:</tspan> Reference point shifts automatically. The current generation is always <tspan font-weight="bold">(0)</tspan>, and historical versions are <tspan font-weight="bold">(-1)</tspan>, <tspan font-weight="bold">(-2)</tspan>, and <tspan font-weight="bold">(-3)</tspan>.
+  </text>
+  <text x="40" y="435" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#10B981" font-weight="bold">
+    Next Run Option: Creating a new dataset named PROD.INVENTRY.MASTER.DATA(+1) will automatically generate G0006V00.
+  </text>
+</svg>

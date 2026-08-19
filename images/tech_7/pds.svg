@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 480" width="100%" height="100%">
+  <!-- Definitions for Markers and Shadows -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#475569" />
+    </marker>
+    <filter id="drop-shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="3" stdDeviation="2" flood-opacity="0.1" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="850" height="480" fill="#F8FAFC" rx="8" />
+
+  <!-- TITLE -->
+  <text x="425" y="40" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#1E293B">MVS Partitioned Data Set (PDS) Structure</text>
+
+  <!-- OUTER PDS BOUNDARY (THE FILE ON DISK) -->
+  <rect x="40" y="70" width="770" height="340" rx="8" fill="#FFFFFF" stroke="#94A3B8" stroke-width="2" stroke-dasharray="6 4" filter="url(#drop-shadow)" />
+  <text x="55" y="95" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#64748B" letter-spacing="0.5">PDS BOUNDARY (ALLOCATED SPACE ON DASD)</text>
+
+  <!-- ==================== SECTION 1: PDS DIRECTORY ==================== -->
+  <g transform="translate(60, 115)">
+    <!-- Directory Container -->
+    <rect x="0" y="0" width="240" height="270" rx="6" fill="#F1F5F9" stroke="#475569" stroke-width="2" />
+    <rect x="0" y="0" width="240" height="35" rx="6" fill="#475569" />
+    <text x="120" y="22" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">PDS DIRECTORY</text>
+
+    <!-- Directory Blocks -->
+    <!-- Member A -->
+    <rect x="10" y="45" width="220" height="40" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" />
+    <text x="20" y="62" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#0F172A">MEMBR1</text>
+    <text x="20" y="78" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#64748B">Pointer: TTR = 000101</text>
+
+    <!-- Member B -->
+    <rect x="10" y="95" width="220" height="40" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" />
+    <text x="20" y="112" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#0F172A">MEMBR2</text>
+    <text x="20" y="128" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#64748B">Pointer: TTR = 000105</text>
+
+    <!-- Member C -->
+    <rect x="10" y="145" width="220" height="40" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" />
+    <text x="20" y="162" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#0F172A">MEMBR3</text>
+    <text x="20" y="178" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#64748B">Pointer: TTR = 000202</text>
+
+    <!-- Empty Directory Space -->
+    <rect x="10" y="195" width="220" height="65" rx="4" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="3 3" />
+    <text x="120" y="233" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-style="italic" fill="#64748B">Unused Directory Slots</text>
+  </g>
+
+  <!-- ==================== SECTION 2: POINTER LINES ==================== -->
+  <!-- From MemA to Member A Data -->
+  <path d="M 290 180 L 330 180" fill="none" stroke="#0EA5E9" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- From MemB to Member B Data -->
+  <path d="M 290 230 L 310 230 L 310 280 L 330 280" fill="none" stroke="#10B981" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- From MemC to Member C Data -->
+  <path d="M 290 280 L 300 280 L 300 350 L 550 350" fill="none" stroke="#F59E0B" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- ==================== SECTION 3: DATA AREA (MEMBERS) ==================== -->
+  <!-- Member A Data Blocks -->
+  <g transform="translate(340, 115)">
+    <rect x="0" y="0" width="180" height="110" rx="6" fill="#E0F2FE" stroke="#0EA5E9" stroke-width="1.5" />
+    <rect x="0" y="0" width="180" height="25" rx="6" fill="#0EA5E9" />
+    <text x="90" y="17" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF">MEMBER A DATA</text>
+    <text x="15" y="45" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#0369A1">Records / Code Blocks</text>
+    <!-- Entry Marker (TTR destination) -->
+    <circle cx="-10" cy="65" r="4" fill="#0EA5E9" />
+    <!-- Internal Track Markers -->
+    <line x1="15" y1="65" x2="165" y2="65" stroke="#93C5FD" stroke-width="1" />
+    <line x1="15" y1="85" x2="100" y2="85" stroke="#93C5FD" stroke-width="1" />
+    <text x="165" y="100" text-anchor="end" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10" font-weight="bold" fill="#0EA5E9">EOF</text>
+  </g>
+
+  <!-- Member B Data Blocks -->
+  <g transform="translate(340, 240)">
+    <rect x="0" y="0" width="180" height="80" rx="6" fill="#D1FAE5" stroke="#10B981" stroke-width="1.5" />
+    <rect x="0" y="0" width="180" height="25" rx="6" fill="#10B981" />
+    <text x="90" y="17" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF">MEMBER B DATA</text>
+    <!-- Entry Marker -->
+    <circle cx="-10" cy="40" r="4" fill="#10B981" />
+    <line x1="15" y1="50" x2="165" y2="50" stroke="#6EE7B7" stroke-width="1" />
+    <text x="165" y="70" text-anchor="end" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10" font-weight="bold" fill="#10B981">EOF</text>
+  </g>
+
+  <!-- Member C Data Blocks -->
+  <g transform="translate(560, 240)">
+    <rect x="0" y="0" width="220" height="110" rx="6" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.5" />
+    <rect x="0" y="0" width="220" height="25" rx="6" fill="#F59E0B" />
+    <text x="110" y="17" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF">MEMBER C DATA</text>
+    <!-- Entry Marker -->
+    <circle cx="-10" cy="110" r="4" fill="#F59E0B" />
+    <line x1="15" y1="50" x2="205" y2="50" stroke="#FDE68A" stroke-width="1" />
+    <line x1="15" y1="70" x2="205" y2="70" stroke="#FDE68A" stroke-width="1" />
+    <text x="205" y="95" text-anchor="end" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10" font-weight="bold" fill="#F59E0B">EOF</text>
+  </g>
+
+  <!-- Unallocated Space Area -->
+  <g transform="translate(560, 115)">
+    <rect x="0" y="0" width="220" height="110" rx="6" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5" stroke-dasharray="4 4" />
+    <text x="110" y="55" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#94A3B8">UNUSED DATA SPACE</text>
+    <text x="110" y="75" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#94A3B8">(Available for new members)</text>
+  </g>
+
+  <!-- FOOTNOTE EXPLANATIONS -->
+  <text x="40" y="440" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#475569">
+    <tspan font-weight="bold">Directory:</tspan> Fixed-size index at the front of the dataset containing member names and absolute location pointers.
+  </text>
+  <text x="40" y="460" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#475569">
+    <tspan font-weight="bold">TTR Pointer:</tspan> Tracks location via Track (TT) and Record (R) numbers. <tspan font-weight="bold">EOF:</tspan> End of File marker separating individual members.
+  </text>
+</svg>
