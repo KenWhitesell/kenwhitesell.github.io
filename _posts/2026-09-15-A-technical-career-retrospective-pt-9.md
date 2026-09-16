@@ -171,6 +171,10 @@ The case, batteries, and other electronics brought the total weight to about 25 
 
 That was an incredible 3 years for me, but the writing was on the wall. The rapid growth and development in the IBM compatible world, especially with the release of Windows 3.0 for the 80386, made me realize there wasn't a long-term future in the platform.
 
+<figure style="float:left; margin:5px; padding:3px; border:2px solid black;" >
+<figcaption>A much younger me</figcaption>
+<img src="/images/tech_9/Young ken-sm.jpg" width="280" height="455">
+</figure>
 It wasn't just CPU speed or memory capacity causing me to become dissatified. 
 
 Video resolutions were better - standard VGA at 640x480 at 16 colors was visually superior to anything the ST could do. But by 1991, the high-end standard was XGA (1024x768 at 256 colors), combined with 14" to 19" monitors. (These were configurations I was using in my day job, and the ST just didn't stand up to the comparison.)
@@ -180,5 +184,14 @@ Software selection was definitely better. Productivity tools for the ST just did
 I was also missing the ability to expand the system using plug-in cards in slots. Networking multiple computers to share resources became more important.
 
 So in 1991, I put together a 33 MHz 80486 system with 16 MB RAM and another 100 MB hard drive. This pushed the ST into a secondary / supporting role. (I was still using it for publishing, but all the real work was being done on the '486.)
+<div style="clear: left;"></div>
 
 Somewhere mid to late 1992, I sold off whatever Atari ST gear I had left at whatever price I could get for it.
+
+The hardest part for me was separating myself from the Atari community in the Washington DC area. This was my first significant involvement with a user group. After six years, the friendships and associations were important to me.
+
+<figure style="float: left; margin:5px; padding:3px; border:2px solid black;" >
+<figcaption>A friend of mine from NOVATARI and I decided to show our love of the platform.</figcaption>
+<img src="/images/tech_9/Cars-sm.jpg" width="704" height="281">
+<figcaption style="text-align: right;">The red Dodge Daytona on the right was mine.</figcaption>
+</figure>
