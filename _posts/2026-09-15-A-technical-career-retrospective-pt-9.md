@@ -188,7 +188,7 @@ So in 1991, I put together a 33 MHz 80486 system with 16 MB RAM and another 100 
 
 Somewhere mid to late 1992, I sold off whatever Atari ST gear I had left at whatever price I could get for it.
 
-The hardest part for me was separating myself from the Atari community in the Washington DC area. This was my first significant involvement with a user group. After six years, the friendships and associations were important to me.
+The hardest part for me was separating myself from the Atari community in the Washington DC area. This was my first significant involvement with a user group. After six years, the friendships and associations were important to me. Giving that up was inevitable, but the hardest part of that decision.
 
 <figure style="float: left; margin:5px; padding:3px; border:2px solid black;" >
 <figcaption>A friend of mine from NOVATARI and I decided to show our love of the platform.</figcaption>
