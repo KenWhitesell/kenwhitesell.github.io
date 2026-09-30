@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="250" viewBox="0 0 520 290">
+
+<g transform="translate(-35, 0)">
+  
+  <defs>
+    <linearGradient id="ignoredGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffdee6"></stop>
+      <stop offset="100%" stop-color="#fca1b0"></stop>
+    </linearGradient>
+    <linearGradient id="addressGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e3fbe3"></stop>
+      <stop offset="100%" stop-color="#a3eba3"></stop>
+    </linearGradient>
+    <linearGradient id="amodeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d4e6f7"></stop>
+      <stop offset="100%" stop-color="#6ba4db"></stop>
+    </linearGradient>
+    <filter id="dropShadow" x="-5%" y="-5%" width="110%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1"></feDropShadow>
+    </filter>
+  </defs>
+
+  
+  <rect width="536.4071049804164" height="285.9608154296875" fill="#fafafa" x="38.28715133666992" y="0"></rect>
+
+  
+  <text x="400" y="35" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="20" font-weight="bold" fill="#222" transform="translate(-109.29242268193246,0.6961194248467457)">IBM 3090 CPU Addressing Layout</text>
+  
+  
+  <g transform="translate(40, 55)">
+    
+    <text x="0" y="22" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#333" transform="translate(2.0883848297940943,-16.707105193606672)">24-Bit Addressing Mode (MVS/370 Legacy)</text>
+    
+    
+    <g transform="translate(0, 35)" filter="url(#dropShadow)">
+      
+      <rect x="0" y="0" width="100" height="40" fill="url(#ignoredGrad)" stroke="#e0526c" stroke-width="1.5" rx="4"></rect>
+      
+      <rect x="100" y="0" width="400" height="40" fill="url(#addressGrad)" stroke="#2b932b" stroke-width="1.5" rx="4"></rect>
+      
+      
+      <text x="10" y="25" text-anchor="left" font-family="Segoe UI, sans-serif" font-size="11" font-weight="bold" fill="#7a1f2e">Ignored (8 bits)</text>
+      <text x="250" y="25" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#135213">Active Address Space (24 bits = 16 MB Range)</text>
+      
+      
+      <text x="5" y="-6" font-family="Courier New, monospace" font-size="11" fill="#444">Bit 0</text>
+      <text x="175" y="-6" text-anchor="end" font-family="Courier New, monospace" font-size="11" fill="#444" transform="translate(-78.66270327173306,-0.6961194248467493)">7</text>
+      <text x="185" y="-6" font-family="Courier New, monospace" font-size="11" fill="#444" transform="translate(-74.48590705689098,-1.3922654049473593)">8</text>
+      <text x="715" y="-6" text-anchor="end" font-family="Courier New, monospace" font-size="11" fill="#444" transform="translate(-222.76161502345315,-2.7845308098947115)">31</text>
+    </g>
+  </g>
+
+  
+  <g transform="translate(40, 180)">
+    
+    <text x="0" y="22" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#333" transform="translate(0,-32.71811751762047)">31-Bit Addressing Mode (MVS/XA &amp; MVS/ESA)</text>
+    
+    
+    <g transform="translate(0, 35)" filter="url(#dropShadow)">
+      
+      <rect x="0" y="0" width="22.5" height="40" fill="url(#amodeGrad)" stroke="#2764a0" stroke-width="1.5" rx="4" transform="translate(-2.7845175322677784,-19.491636003501384)"></rect>
+      
+      <rect x="22.5" y="0" width="479.6113271714895" height="40" fill="url(#addressGrad)" stroke="#2b932b" stroke-width="1.5" rx="4" transform="translate(-2.0884113850479764,-19.49168911400909)"></rect>
+      
+      
+      <text x="11.25" y="25" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" font-weight="bold" fill="#0f3b66" transform="translate(-2.7845241710812454,-19.491636003501384)">A</text>
+      <text x="371.25" y="25" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#135213" transform="translate(-125.30340845069239,-18.099370598554003)">Active Address Space (31 bits = 2 GB Range)</text>
+      
+      
+      <text x="5" y="-6" font-family="Courier New, monospace" font-size="11" fill="#666" transform="translate(0,-20.18775542834811)">0</text>
+      <text x="26" y="-6" font-family="Courier New, monospace" font-size="11" fill="#666" transform="translate(2.0883981074210354,-21.580073943803228)">1</text>
+      <text x="715" y="-6" text-anchor="end" font-family="Courier New, monospace" font-size="11" fill="#666" transform="translate(-221.36937617375975,-26.452936472984305)">31</text>
+    </g>
+    
+    
+    <path d="M 11.25,80 L 11.25,105 L 130,105" fill="none" stroke="#555" stroke-width="1" stroke-dasharray="3,3" transform="translate(-4.176782937215123,-20.883901408448764)"></path>
+    <text x="140" y="109" font-family="Segoe UI, sans-serif" font-size="12" fill="#444" transform="translate(-6.9613004694829215,-20.18778198360198)">
+      <tspan font-weight="bold" fill="#1d5287">Bit 0 (AMODE flag):</tspan> 0 = 24-bit execution | 1 = 31-bit execution
+    </text>
+  </g>
+</g>
+
+</svg>
