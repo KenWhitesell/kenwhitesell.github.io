@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 950" width="100%" height="100%">
+  <defs>
+    <!-- Styles for typography and look -->
+    <style>
+      .title { font-family: 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 24px; font-weight: bold; fill: #1a1a1a; }
+      .subtitle { font-family: 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 14px; fill: #666666; }
+      .label { font-family: 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 13px; font-weight: bold; }
+      .desc { font-family: 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 12px; fill: #333333; }
+      .addr { font-family: 'Courier New', Courier, monospace; font-size: 13px; font-weight: bold; fill: #222222; }
+      .size-tag { font-family: 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 11px; font-weight: bold; fill: #555555; }
+      .bracket-text { font-family: 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #444444; }
+    </style>
+    
+    <!-- Drop shadow for the memory blocks -->
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#f8f8f8"/>
+
+  <!-- Header -->
+  <text x="40" y="45" class="title">IBM PC, XT, &amp; AT 1 MB Memory Map</text>
+  <text x="40" y="70" class="subtitle">Real-Mode Memory Architecture (Intel 8088 / 8086 / 80286)</text>
+
+  <!-- Group for the main diagram diagram -->
+  <g transform="transform: translate(0, 0)">
+    
+    <!-- LEFT SIDE: ADDRESS LINES (Top to Bottom: 1MB down to 0) -->
+    <!-- We present memory in the traditional 'high memory at top, low memory at bottom' layout -->
+    <g class="addr" text-anchor="end">
+      <!-- UMA Addresses -->
+      <text x="170" y="125">100000h (1MB)</text>
+      <text x="170" y="195">F0000h</text>
+      <text x="170" y="265">E0000h</text>
+      <text x="170" y="335">D0000h</text>
+      <text x="170" y="405">C0000h</text>
+      <text x="170" y="475">B8000h</text>
+      <text x="170" y="510">B0000h</text>
+      <text x="170" y="545">A0000h</text>
+      
+      <!-- Conventional Memory Addresses -->
+      <text x="170" y="775">00500h</text>
+      <text x="170" y="825">00400h</text>
+      <text x="170" y="875">00000h</text>
+    </g>
+
+    <!-- MEMORY BLOCKS (X-range: 190 to 590, Width: 400) -->
+    
+    <!-- ================= UPPER MEMORY AREA (UMA) ================= -->
+    <!-- Motherboard BIOS ROM -->
+    <rect x="190" y="120" width="400" height="70" fill="#ffdddd" stroke="#cc6666" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="210" y="150" class="label" fill="#a02020">System BIOS ROM</text>
+    <text x="210" y="170" class="desc">Motherboard BIOS, Power-On Self Test (POST), BASIC Repl.</text>
+    <text x="540" y="160" class="size-tag">64 KB</text>
+
+    <!-- PC/XT BIOS Extension / AT Reserved -->
+    <rect x="190" y="190" width="400" height="70" fill="#ffeaea" stroke="#cc6666" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="210" y="220" class="label" fill="#a02020">BIOS ROM / System Expansion</text>
+    <text x="210" y="240" class="desc">PC/XT Cassette BASIC; AT Motherboard ROM Expansion</text>
+    <text x="540" y="230" class="size-tag">64 KB</text>
+
+    <!-- Expansion Block / EMS Page Frame -->
+    <rect x="190" y="260" width="400" height="70" fill="#fff5dd" stroke="#d4a373" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="210" y="290" class="label" fill="#8f5d2a">Link / Adapter ROM Space</text>
+    <text x="210" y="310" class="desc">Common area for EMS Page Frames &amp; Network Adapter ROMs</text>
+    <text x="540" y="300" class="size-tag">64 KB</text>
+
+    <!-- Video & Adapter ROMs -->
+    <rect x="190" y="330" width="400" height="70" fill="#fff5dd" stroke="#d4a373" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="210" y="360" class="label" fill="#8f5d2a">Video &amp; Controller ROM Extensions</text>
+    <text x="210" y="380" class="desc">VGA BIOS (C000-C7FF), Hard Disk Controllers (C800)</text>
+    <text x="540" y="370" class="size-tag">64 KB</text>
+
+    <!-- Video RAM - CGA / EGA / VGA Text -->
+    <rect x="190" y="400" width="400" height="70" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="210" y="430" class="label" fill="#0369a1">CGA / EGA / VGA Color Text &amp; Graphics</text>
+    <text x="210" y="450" class="desc">Video Memory Window (B8000h - BFFFFh)</text>
+    <text x="540" y="440" class="size-tag">32 KB</text>
+
+    <!-- Video RAM - MDA / Hercules -->
+    <rect x="190" y="470" width="400" height="35" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="210" y="492" class="label" fill="#0369a1">Monochrome Display Adapter (MDA)</text>
+    <text x="540" y="492" class="size-tag">32 KB</text>
+
+    <!-- Video RAM - EGA / VGA Graphics -->
+    <rect x="190" y="505" width="400" height="35" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="210" y="527" class="label" fill="#0369a1">EGA / VGA Graphics Buffer</text>
+    <text x="540" y="527" class="size-tag">64 KB</text>
+
+    <!-- ================= CONVENTIONAL MEMORY ================= -->
+    <!-- Transient Program Area (TPA) / User Application Space -->
+    <!-- Re-used broken/dash line variant to show a large split area scale -->
+    <rect x="190" y="540" width="400" height="230" fill="#ecfdf5" stroke="#059669" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="210" y="630" class="label" fill="#047857">Transient Program Area (TPA)</text>
+    <text x="210" y="655" class="desc">MS-DOS Kernel, Device Drivers, TSRs,</text>
+    <text x="210" y="675" class="desc">and User Application Executables (Command.com, Games).</text>
+    <text x="535" y="630" class="size-tag">~639 KB</text>
+    
+    <!-- System Data Area (DOS / Drivers Communication) -->
+    <rect x="190" y="770" width="400" height="50" fill="#f0fdf4" stroke="#059669" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="210" y="800" class="label" fill="#047857">DOS / Operating System Data Area</text>
+    <text x="540" y="800" class="size-tag">256 B</text>
+
+    <!-- BIOS Data Area (BDA) -->
+    <rect x="190" y="820" width="400" height="50" fill="#edf2f7" stroke="#4a5568" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="210" y="850" class="label" fill="#2d3748">BIOS Data Area (BDA)</text>
+    <text x="210" y="863" class="desc">Keyboard buffer, equipment flags, COM/LPT states</text>
+    <text x="545" y="850" class="size-tag">256 B</text>
+
+    <!-- Interrupt Vector Table (IVT) -->
+    <rect x="190" y="870" width="400" height="50" fill="#e2e8f0" stroke="#4a5568" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="210" y="900" class="label" fill="#2d3748">Interrupt Vector Table (IVT)</text>
+    <text x="210" y="913" class="desc">256 CPU real-mode pointers (0000:0000 onwards)</text>
+    <text x="540" y="900" class="size-tag">1 KB</text>
+
+    <!-- RIGHT SIDE SYSTEM BRACKETS -->
+    <!-- UMA Bracket -->
+    <path d="M 605,120 L 620,120 L 620,330 L 635,330 L 620,330 L 620,540 L 605,540" fill="none" stroke="#444444" stroke-width="2"/>
+    <text x="645" y="335" class="bracket-text">Upper Memory Area (UMA)</text>
+    <text x="645" y="355" class="subtitle">Reserved for Hardware (364 KB)</text>
+
+    <!-- Conventional Memory Bracket -->
+    <path d="M 605,540 L 620,540 L 620,730 L 635,730 L 620,730 L 620,920 L 605,920" fill="none" stroke="#444444" stroke-width="2"/>
+    <text x="645" y="735" class="bracket-text">Conventional Memory</text>
+    <text x="645" y="755" class="subtitle">The &quot;640 KB Barrier&quot; Area</text>
+
+  </g>
+</svg>
+
