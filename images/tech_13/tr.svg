@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 230" width="100%" height="100%" style="background-color:#e8e9ea;font-family:'Segoe UI',sans-serif;">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.1"/>
+    </filter>
+    <marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4">
+      <circle cx="5" cy="5" r="3" fill="#495057"/>
+    </marker>
+  </defs>
+
+  <!-- Title Block -->
+  <text x="150" y="16" text-anchor="middle" font-size="18" font-weight="bold" fill="#1e3a8a" letter-spacing="0.5">LOGICAL TOKEN RING DIAGRAM</text>
+
+  <!-- ==================== MAIN RING TRUNK LOOP ==================== -->
+  <path d="M 112.5 55 C 135 40, 165 40, 197.5 55" fill="none" stroke="#2563eb" stroke-width="3.5" />
+  <path d="M 282.5 55 C 282.5 10, 17.5 10, 17.5 55" fill="none" stroke="#2563eb" stroke-width="3.5" />
+
+  <!-- ==================== MAU 1 CHASSIS ==================== -->
+  <g transform="translate(2, 65)" filter="url(#shadow)">
+    <rect x="0" y="0" width="130" height="32" rx="4" fill="#ffffff" stroke="#475569" stroke-width="1.5"/>
+    <rect x="0" y="0" width="130" height="15" rx="3" fill="#e2e8f0"/>
+    <text x="65" y="11" text-anchor="middle" font-size="9" font-weight="bold" fill="#334155">MAU 1</text>
+    <!-- Light Red Oval - Stroke Only, No Fill Color -->
+    <ellipse cx="65" cy="24" rx="55" ry="6" fill="none" stroke="#ef4444" stroke-width="1.2"/>
+    <!-- RI / RO Interface Boxes -->
+    <rect x="10" y="-12" width="15" height="12" fill="#cbd5e1" stroke="#475569" stroke-width="1.2"/>
+    <text x="17.5" y="-3" text-anchor="middle" font-size="7" font-weight="bold" fill="#1e293b">RI</text>
+    <rect x="105" y="-12" width="15" height="12" fill="#cbd5e1" stroke="#475569" stroke-width="1.2"/>
+    <text x="112.5" y="-3" text-anchor="middle" font-size="7" font-weight="bold" fill="#1e293b">RO</text>
+    <!-- Numbered Ports 1-8 -->
+    <g transform="translate(9, 32)" fill="#f1f5f9" stroke="#64748b" stroke-width="0.8" font-size="8">
+      <rect x="0" y="0" width="12" height="11"/><text x="6" y="9" text-anchor="middle" fill="#334155" stroke="none">1</text>
+      <rect x="14" y="0" width="12" height="11"/><text x="20" y="9" text-anchor="middle" fill="#334155" stroke="none">2</text>
+      <rect x="28" y="0" width="12" height="11"/><text x="34" y="9" text-anchor="middle" fill="#334155" stroke="none">3</text>
+      <rect x="42" y="0" width="12" height="11"/><text x="48" y="9" text-anchor="middle" fill="#334155" stroke="none">4</text>
+      <rect x="56" y="0" width="12" height="11"/><text x="62" y="9" text-anchor="middle" fill="#334155" stroke="none">5</text>
+      <rect x="70" y="0" width="12" height="11"/><text x="76" y="9" text-anchor="middle" fill="#334155" stroke="none">6</text>
+      <rect x="84" y="0" width="12" height="11"/><text x="90" y="9" text-anchor="middle" fill="#334155" stroke="none">7</text>
+      <rect x="98" y="0" width="12" height="11"/><text x="104" y="9" text-anchor="middle" fill="#334155" stroke="none">8</text>
+    </g>
+  </g>
+
+  <!-- ==================== MAU 2 CHASSIS ==================== -->
+  <g transform="translate(170, 65)" filter="url(#shadow)">
+    <rect x="0" y="0" width="130" height="32" rx="4" fill="#ffffff" stroke="#475569" stroke-width="1.5"/>
+    <rect x="0" y="0" width="130" height="15" rx="3" fill="#e2e8f0"/>
+    <text x="65" y="11" text-anchor="middle" font-size="9" font-weight="bold" fill="#334155">MAU 2</text>
+    <!-- Light Red Oval - Stroke Only, No Fill Color -->
+    <ellipse cx="65" cy="24" rx="55" ry="6" fill="none" stroke="#ef4444" stroke-width="1.2"/>
+    <!-- RI / RO Interface Boxes -->
+    <rect x="15" y="-12" width="15" height="12" fill="#cbd5e1" stroke="#475569" stroke-width="1.2"/>
+    <text x="22.5" y="-3" text-anchor="middle" font-size="7" font-weight="bold" fill="#1e293b">RI</text>
+    <rect x="105" y="-12" width="15" height="12" fill="#cbd5e1" stroke="#475569" stroke-width="1.2"/>
+    <text x="112.5" y="-3" text-anchor="middle" font-size="7" font-weight="bold" fill="#1e293b">RO</text>
+    <!-- Numbered Ports 1-8 -->
+    <g transform="translate(9, 32)" fill="#f1f5f9" stroke="#64748b" stroke-width="0.8" font-size="8">
+      <rect x="0" y="0" width="12" height="11"/><text x="6" y="9" text-anchor="middle" fill="#334155" stroke="none">1</text>
+      <rect x="14" y="0" width="12" height="11"/><text x="20" y="9" text-anchor="middle" fill="#334155" stroke="none">2</text>
+      <rect x="28" y="0" width="12" height="11"/><text x="34" y="9" text-anchor="middle" fill="#334155" stroke="none">3</text>
+      <rect x="42" y="0" width="12" height="11"/><text x="48" y="9" text-anchor="middle" fill="#334155" stroke="none">4</text>
+      <rect x="56" y="0" width="12" height="11"/><text x="62" y="9" text-anchor="middle" fill="#334155" stroke="none">5</text>
+      <rect x="70" y="0" width="12" height="11"/><text x="76" y="9" text-anchor="middle" fill="#334155" stroke="none">6</text>
+      <rect x="84" y="0" width="12" height="11"/><text x="90" y="9" text-anchor="middle" fill="#334155" stroke="none">7</text>
+      <rect x="98" y="0" width="12" height="11"/><text x="104" y="9" text-anchor="middle" fill="#334155" stroke="none">8</text>
+    </g>
+  </g>
+
+  <!-- ==================== WORKSTATIONS / HARDWARE NODES (Spacing Reduced) ==================== -->
+  <!-- PC positions shifted horizontally inward to significantly reduce whitespace gaps -->
+  <!-- PC 1 -->
+  <g transform="translate(0, 145)" filter="url(#shadow)">
+    <rect x="5" y="0" width="40" height="24" rx="3" fill="#bae6fd" stroke="#475569" stroke-width="1.2"/>
+    <rect x="8" y="3" width="34" height="18" fill="#f8fafc"/>
+    <path d="M 18 24 L 12 32 L 38 32 L 32 24 Z" fill="#64748b" stroke="#475569" stroke-width="1"/>
+    <rect x="10" y="32" width="30" height="3" rx="1" fill="#475569"/>
+    <text x="25" y="44" text-anchor="middle" font-size="9" font-weight="bold" fill="#1e293b">PC 1</text>
+  </g>
+
+  <!-- PC 2 -->
+  <g transform="translate(55, 145)" filter="url(#shadow)">
+    <rect x="5" y="0" width="40" height="24" rx="3" fill="#bae6fd" stroke="#475569" stroke-width="1.2"/>
+    <rect x="8" y="3" width="34" height="18" fill="#f8fafc"/>
+    <path d="M 18 24 L 12 32 L 38 32 L 32 24 Z" fill="#64748b" stroke="#475569" stroke-width="1"/>
+    <rect x="10" y="32" width="30" height="3" rx="1" fill="#475569"/>
+    <text x="25" y="44" text-anchor="middle" font-size="9" font-weight="bold" fill="#1e293b">PC 2</text>
+  </g>
+
+  <!-- PC 3 -->
+  <g transform="translate(110, 145)" filter="url(#shadow)">
+    <rect x="5" y="0" width="40" height="24" rx="3" fill="#bae6fd" stroke="#475569" stroke-width="1.2"/>
+    <rect x="8" y="3" width="34" height="18" fill="#f8fafc"/>
+    <path d="M 18 24 L 12 32 L 38 32 L 32 24 Z" fill="#64748b" stroke="#475569" stroke-width="1"/>
+    <rect x="10" y="32" width="30" height="3" rx="1" fill="#475569"/>
+    <text x="25" y="44" text-anchor="middle" font-size="9" font-weight="bold" fill="#1e293b">PC 3</text>
+  </g>
+
+  <!-- PC 4 -->
+  <g transform="translate(165, 145)" filter="url(#shadow)">
+    <rect x="5" y="0" width="40" height="24" rx="3" fill="#bae6fd" stroke="#475569" stroke-width="1.2"/>
+    <rect x="8" y="3" width="34" height="18" fill="#f8fafc"/>
+    <path d="M 18 24 L 12 32 L 38 32 L 32 24 Z" fill="#64748b" stroke="#475569" stroke-width="1"/>
+    <rect x="10" y="32" width="30" height="3" rx="1" fill="#475569"/>
+    <text x="25" y="44" text-anchor="middle" font-size="9" font-weight="bold" fill="#1e293b">PC 4</text>
+  </g>
+
+  <!-- SERVER TERMINAL -->
+  <g transform="translate(220, 137)" filter="url(#shadow)">
+    <rect x="10" y="0" width="30" height="42" rx="3" fill="#334155" stroke="#1e293b" stroke-width="1.2"/>
+    <rect x="14" y="4" width="22" height="4" fill="#1e293b"/>
+    <rect x="14" y="10" width="22" height="4" fill="#1e293b"/>
+    <circle cx="18" cy="21" r="1.2" fill="#22c55e"/>
+    <circle cx="24" cy="21" r="1.2" fill="#eab308"/>
+    <line x1="14" y1="29" x2="36" y2="29" stroke="#1e293b" stroke-width="1"/>
+    <line x1="14" y1="33" x2="36" y2="33" stroke="#1e293b" stroke-width="1"/>
+    <text x="25" y="53" text-anchor="middle" font-size="9" font-weight="bold" fill="#b91c1c">SERVER</text>
+  </g>
+
+  <!-- ==================== LOBE PATCH CABLES ==================== -->
+  <!-- Connected exactly to port block centers (y=108) and dynamically curved to compressed targets -->
+  <!-- MAU 1 Port 3 Center (393, 108) -> PC 1 Top Center (375, 145) -->
+  <path d="M 43 108 L 43 122 C 43 135, 25 135, 25 145" fill="none" stroke="#475569" stroke-width="1.5" marker-start="url(#dot)" />
+  <!-- MAU 1 Port 4 Center (407, 108) -> PC 2 Top Center (430, 145) -->
+  <path d="M 57 108 L 57 122 C 57 135, 80 135, 80 145" fill="none" stroke="#475569" stroke-width="1.5" marker-start="url(#dot)" />
+  <!-- MAU 1 Port 5 Center (421, 108) -> PC 3 Top Center (485, 145) -->
+  <path d="M 71 108 L 71 122 C 71 135, 135 135, 135 145" fill="none" stroke="#475569" stroke-width="1.5" marker-start="url(#dot)" />
+  <!-- MAU 2 Port 4 Center (577, 108) -> PC 4 Top Center (540, 145) -->
+  <path d="M 227 108 L 227 122 C 227 135, 190 135, 190 145" fill="none" stroke="#475569" stroke-width="1.5" marker-start="url(#dot)" />
+  <!-- MAU 2 Port 5 Center (591, 108) -> Server Top Center (595, 137) -->
+  <path d="M 241 108 L 241 122 C 241 135, 245 135, 245 137" fill="none" stroke="#475569" stroke-width="1.5" marker-start="url(#dot)" />
+
+  <!-- ==================== LEGEND BLOCK ==================== -->
+  <g transform="translate(10, 190)" font-size="10" font-weight="bold">
+    <line x1="0" y1="12" x2="30" y2="12" stroke="#2563eb" stroke-width="3" />
+    <text x="38" y="15" fill="#334155">Main Trunk Ring (Curved Top Loop)</text>
+    <line x1="0" y1="25" x2="30" y2="25" stroke="#475569" stroke-width="1.5" />
+    <text x="38" y="28" fill="#334155">Station Lobe Drops (Centered on Labeled Blocks)</text>
+  </g>
+</svg>

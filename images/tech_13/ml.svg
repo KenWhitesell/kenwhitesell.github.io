@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 375" width="100%" height="100%" style="background-color: #f8f9fa; font-family: 'Segoe UI', sans-serif;">
+  <defs>
+    <!-- Drop Shadow -->
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.1"/>
+    </filter>
+    
+    <!-- Flow Marker for Backbone Link Segment -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 Z" fill="#2563eb" />
+    </marker>
+
+    <!-- REUSABLE COMPONENT: Single Floor Level Array -->
+    <g id="floor-unit">
+      <line x1="0" y1="0" x2="120" y2="0" stroke="#e2e8f0" stroke-width="1.5" stroke-dasharray="3,3"/>
+      <!-- Blue horizontal ring touching the left side of the red vertical ring at X=95 -->
+      <ellipse cx="60" cy="-22.5" rx="35" ry="10" fill="none" stroke="#0284c7" stroke-width="2"/>
+    </g>
+
+    <!-- REUSABLE COMPONENT: Ultra-Compact Building Shell -->
+    <g id="building">
+      <rect x="0" y="0" width="120" height="300" rx="0" fill="#ffffff" stroke="#64748b" stroke-width="2"/>
+      <rect x="0" y="0" width="120" height="25" fill="#cbd5e1" stroke="#64748b" stroke-width="1"/>
+      <!-- Vertical Spine Ring Structure (Red Vertical Loops) -->
+      <rect x="95" y="32" width="16" height="258" rx="3" fill="none" stroke="#dc2626" stroke-width="2"/>
+      <!-- Floor Layout Deployments (45px intervals) -->
+      <use href="#floor-unit" x="0" y="70"/>   <!-- F6 -->
+      <use href="#floor-unit" x="0" y="115"/>  <!-- F5 -->
+      <use href="#floor-unit" x="0" y="160"/>  <!-- F4 -->
+      <use href="#floor-unit" x="0" y="205"/>  <!-- F3 -->
+      <use href="#floor-unit" x="0" y="250"/>  <!-- F2 -->
+      <use href="#floor-unit" x="0" y="295"/>  <!-- F1 -->
+      <!-- Floor Designation Texts -->
+      <g font-size="9" font-weight="bold" fill="#64748b" stroke="none">
+        <text x="8" y="46">F6</text><text x="8" y="91">F5</text>
+        <text x="8" y="136">F4</text><text x="8" y="181">F3</text>
+        <text x="8" y="226">F2</text><text x="8" y="271">F1</text>
+      </g>
+    </g>
+  </defs>
+
+  <!-- Title & Description Header -->
+  <text x="200" y="20" text-anchor="middle" font-size="18" font-weight="bold" fill="#1e3a8a" letter-spacing="0.5">MonLife Token Ring Diagram</text>
+  
+  <!-- ==================== CAMPUS MODULES PLACEMENT ==================== -->
+  <g transform="translate(20, 30)" filter="url(#shadow)">
+    <!-- Building 1 -->
+    <g transform="translate(0, 0)">
+      <use href="#building"/>
+      <text x="60" y="17" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e293b">BUILDING 1</text>
+    </g>
+
+    <!-- Building 2 (Touches right wall of Building 1) -->
+    <g transform="translate(120, 0)">
+      <use href="#building"/>
+      <text x="60" y="17" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e293b">BUILDING 2</text>
+    </g>
+
+    <!-- Building 3 (Touches right wall of Building 2) -->
+    <g transform="translate(240, 0)">
+      <use href="#building"/>
+      <text x="60" y="17" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e293b">BUILDING 3</text>
+    </g>
+    
+    <!-- ==================== 4TH FLOOR SINGLE LINE BACKBONE INTERCONNECT ==================== -->
+    <path d="M 95 155 L 335 155" fill="none" stroke="#2563eb" stroke-width="3" />
+  </g>
+
+  <!-- ==================== LEGEND BLOCK ==================== -->
+  <g transform="translate(20, 335)" font-size="10" font-weight="bold">
+    <rect x="0" y="0" width="360" height="32" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" filter="url(#shadow)"/>
+    <ellipse cx="20" cy="16" rx="12" ry="5" fill="none" stroke="#0284c7" stroke-width="1.5"/>
+    <text x="38" y="19" fill="#334155">Floor Rings</text>
+    
+    <rect x="115" y="7" width="12" height="18" fill="none" stroke="#dc2626" stroke-width="2"/>
+    <text x="133" y="19" fill="#334155">Vertical Spine Rings</text>
+    
+    <line x1="240" y1="16" x2="265" y2="16" stroke="#2563eb" stroke-width="3"/>
+    <text x="272" y="19" fill="#334155">4th Floor Link</text>
+  </g>
+</svg>

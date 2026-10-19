@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" width="100%" height="100%">
+  <defs>
+    <!-- Drop Shadow Filter for Hardware Icons -->
+    <filter id="drop-shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="3" dy="3" stdDeviation="4" flood-opacity="0.3"/>
+    </filter>
+
+    <!-- Master Computer Component Template -->
+    <g id="master-computer">
+      <rect x="0" y="0" width="100" height="70" rx="6" fill="#1e293b" filter="url(#drop-shadow)"/>
+      <rect x="8" y="8" width="84" height="42" rx="3" fill="#38bdf8"/>
+      <polygon points="12,14 45,14 45,32 12,32" fill="#7dd3fc" opacity="0.4"/>
+      <rect x="35" y="70" width="30" height="15" fill="#475569"/>
+      <ellipse cx="50" cy="85" rx="35" ry="8" fill="#334155"/>
+      <rect x="0" y="93" width="100" height="22" rx="4" fill="#64748b" filter="url(#drop-shadow)"/>
+      <rect x="75" y="101" width="12" height="5" fill="#1e293b"/>
+      <circle cx="15" cy="104" r="2" fill="#22c55e"/>
+    </g>
+
+    <!-- Workstation PC Component Template -->
+    <g id="pc-workstation">
+      <rect x="0" y="0" width="90" height="65" rx="5" fill="#334155" filter="url(#drop-shadow)"/>
+      <rect x="8" y="8" width="74" height="38" rx="2" fill="#0284c7"/>
+      <polygon points="12,12 40,12 40,28 12,28" fill="#38bdf8" opacity="0.3"/>
+      <rect x="32" y="65" width="26" height="12" fill="#475569"/>
+      <ellipse cx="45" cy="77" rx="30" ry="6" fill="#1e293b"/>
+      <rect x="5" y="83" width="80" height="18" rx="3" fill="#475569" filter="url(#drop-shadow)"/>
+      <rect x="65" y="90" width="8" height="4" fill="#1e293b"/>
+      <circle cx="12" cy="92" r="1.5" fill="#eab308"/>
+    </g>
+
+    <!-- HP LaserJet Printer Component Template -->
+    <g id="hp-laserjet">
+      <rect x="0" y="15" width="85" height="45" rx="4" fill="#cbd5e1" stroke="#94a3b8" stroke-width="2" filter="url(#drop-shadow)"/>
+      <rect x="12" y="0" width="61" height="18" rx="2" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="1"/>
+      <rect x="17" y="5" width="51" height="2" fill="#94a3b8"/>
+      <rect x="12" y="50" width="61" height="15" rx="1" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+      <path d="M 12 55 L 73 55" stroke="#cbd5e1" stroke-width="2"/>
+      <rect x="68" y="22" width="10" height="6" rx="1" fill="#3b82f6"/>
+      <circle cx="62" cy="25" r="1.5" fill="#22c55e"/>
+    </g>
+
+    <!-- External Modem Component Template -->
+    <g id="modem">
+      <rect x="0" y="0" width="65" height="20" rx="3" fill="#1e293b" filter="url(#drop-shadow)"/>
+      <circle cx="10" cy="10" r="1.5" fill="#22c55e"/>
+      <circle cx="18" cy="10" r="1.5" fill="#22c55e"/>
+      <circle cx="26" cy="10" r="1.5" fill="#22c55e"/>
+      <circle cx="34" cy="10" r="1.5" fill="#ef4444"/>
+      <circle cx="42" cy="10" r="1.5" fill="#22c55e"/>
+      <path d="M 52 7 L 58 7 M 52 10 L 58 10 M 52 13 L 58 13" stroke="#64748b" stroke-width="1.5"/>
+    </g>
+  </defs>
+
+  <g transform="translate(-30, 0)">
+  <!-- Title & Header Block -->
+  <text x="240" y="25" font-family="Segoe UI, San Francisco, Helvetica, sans-serif" font-size="20" font-weight="600" fill="#0f172a" letter-spacing="-0.5">District Office 10Net Network</text>
+
+  <!-- Central Thin-Net Coaxial Cable Bus Assembly (Bypassing Title Gap) -->
+  <g id="network-bus">
+    <!-- Main RG-58 Coaxial Trunk Line -->
+    <line x1="80" y1="40" x2="620" y2="40" stroke="#334155" stroke-width="6" stroke-linecap="round"/>
+    <line x1="80" y1="40" x2="620" y2="40" stroke="#64748b" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Left End Hardware Terminator BNC Assembly -->
+    <g transform="translate(80, 40)">
+      <rect x="-15" y="-6" width="15" height="12" fill="#94a3b8" rx="1"/>
+      <rect x="-22" y="-9" width="7" height="18" fill="#cbd5e1" rx="2"/>
+      <rect x="-25" y="-4" width="3" height="8" fill="#475569"/>
+    </g>
+
+    <!-- Right End Hardware Terminator BNC Assembly -->
+    <g transform="translate(620, 40)">
+      <rect x="0" y="-6" width="15" height="12" fill="#94a3b8" rx="1"/>
+      <rect x="15" y="-9" width="7" height="18" fill="#cbd5e1" rx="2"/>
+      <rect x="22" y="-4" width="3" height="8" fill="#475569"/>
+    </g>
+
+    <!-- BNC T-Connector Graphical Elements at Drop Points -->
+    <!-- Node 1 Drop T-Connector -->
+    <g transform="translate(180, 40)">
+      <circle cx="0" cy="0" r="7" fill="#64748b"/>
+      <rect x="-5" y="0" width="10" height="15" fill="#94a3b8"/>
+    </g>
+    <!-- Node 2 Drop T-Connector -->
+    <g transform="translate(380, 40)">
+      <circle cx="0" cy="0" r="7" fill="#64748b"/>
+      <rect x="-5" y="0" width="10" height="15" fill="#94a3b8"/>
+    </g>
+    <!-- Node 3 Drop T-Connector -->
+    <g transform="translate(550, 40)">
+      <circle cx="0" cy="0" r="7" fill="#64748b"/>
+      <rect x="-5" y="0" width="10" height="15" fill="#94a3b8"/>
+    </g>
+  </g>
+
+  <!-- MASTER NODE NODE ASSEMBLY (Left End of Network Bus) -->
+  <g id="master-node-assembly">
+    <!-- Drop Line connection from T-connector to Master PC -->
+    <path d="M 180,40 L 180,105" stroke="#475569" stroke-width="3" stroke-dasharray="4,2"/>
+    <circle cx="180" cy="105" r="4" fill="#334155"/>
+
+    <!-- Master Computer Instance -->
+    <use href="#master-computer" x="130" y="105"/>
+    
+    <text x="180" y="250" font-family="Segoe UI, San Francisco, Helvetica, sans-serif" font-size="18" font-weight="600" fill="#0f172a" text-anchor="middle">Master</text>
+
+    <!-- Locally Attached Hardware Peripherals -->
+    <!-- HP LaserJet Component Connection & Instance -->
+    <path d="M 130,160 L 95,160 L 95,210" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linejoin="round"/>
+    <use href="#hp-laserjet" x="50" y="210"/>
+    <text x="92" y="290" font-family="Segoe UI, San Francisco, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#475569" text-anchor="middle">HP LaserJet</text>
+
+    <!-- External Modem Component Connection & Instance -->
+    <path d="M 230,160 L 265,160 L 265,235" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linejoin="round"/>
+    <use href="#modem" x="233" y="235"/>
+    <text x="265" y="275" font-family="Segoe UI, San Francisco, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#475569" text-anchor="middle">Modem</text>
+  </g>
+
+  <!-- WORKSTATION CLIENT OBJECT GROUP (Single Composite SVG Entity) -->
+  <g id="workstations-group">
+    
+    <!-- Workstation PC 1 (Middle Bus Node) -->
+    <g id="workstation-client-1">
+      <!-- Drop Line connection from T-connector to PC 1 -->
+      <path d="M 380,40 L 380,105" stroke="#475569" stroke-width="3" stroke-dasharray="4,2"/>
+      <circle cx="380" cy="105" r="4" fill="#334155"/>
+      
+      <!-- Workstation PC Template Instance 1 -->
+      <use href="#pc-workstation" x="335" y="105"/>
+      
+      
+      <text x="380" y="240" font-family="Segoe UI, San Francisco, Helvetica, sans-serif" font-size="15" font-weight="500" fill="#334155" text-anchor="middle">PC</text>
+    </g>
+
+    <!-- Workstation PC 2 (Right Bus Node) -->
+    <g id="workstation-client-2">
+      <!-- Drop Line connection from T-connector to PC 2 -->
+      <path d="M 550,40 L 550,105" stroke="#475569" stroke-width="3" stroke-dasharray="4,2"/>
+      <circle cx="550" cy="105" r="4" fill="#334155"/>
+      
+      <!-- Workstation PC Template Instance 2 -->
+      <use href="#pc-workstation" x="505" y="105"/>
+      
+      
+      <text x="550" y="240" font-family="Segoe UI, San Francisco, Helvetica, sans-serif" font-size="15" font-weight="500" fill="#334155" text-anchor="middle">PC</text>
+    </g>
+
+  </g>
+  </g>
+</svg>
