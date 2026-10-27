@@ -4,6 +4,8 @@ title: I was wrong about AI
 tags: Personal, Django
 ---
 
+I'm taking a brief break from my career retrospective to address a very current-for-me topic.
+
 ### I am a skeptic
 
 Through the years I've become extremely skeptical about new technologies. My luck with trying products - both hardware and software - that are new has been spotty at best.
@@ -17,6 +19,7 @@ I've been involved with different trials and evaluations of many of them. I've b
 Most of them came up very short. They either required much more significant hardware than what we had available, making them too expensive for wide-spread adoption; or took an unacceptable length of time to generate the code; or didn't allow for certain requirements to be modeled; or didn't generate accurate code.
 
 So yes, when general purpose AI started becoming available, my first thought was "Here we go again.". Then I started seeing others using it with some erratic and dangerous outcomes, and that **really** turned me off.
+<!--more-->
 
 Then, after seeing and hearing about more useful results, I started to believe that there _might_ be some value in well-defined and well-constrained situations. But I remained skeptical - I felt like my situations were outside the range of what those tools could reasonably do.
 
